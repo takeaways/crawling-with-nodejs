@@ -20,3 +20,6 @@
 
 ### xlsx패키지로  엑셀 파싱하기
 1. npm i xlsx
+
+### axios + cheerio
+1. npm i axios cheerio
