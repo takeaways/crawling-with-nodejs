@@ -23,3 +23,13 @@
 
 ### axios + cheerio
 1. npm i axios cheerio
+
+### puppeteer
+1. npm i puppeteer
+2. userAgent 내 환경이 무엇인지
+3. const browser = await puppeteer.launch({headless:false});
+  - headless : 서버에서 사용하기 때문에 화면에 보이고 안보이고를 판단 할 수 있다
+4. npm i csv-stringify
+5. document 쓰는 위치 잘 기억!! 002/index.js
+6. https://try-puppeteer.appspot.com
+7. page.setUserAgent : navigator.userAgent
