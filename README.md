@@ -1,5 +1,5 @@
 "# crawling-with-nodejs"
-### NodeJs 크롤링 - 파이썬, 자바
+### NodeJs 크롤링 - 파이썬, 자바 001
 1. CSV, XLSX 파싱
 1. axios, cheerio로 간단한 페이지 크롤링
 1. puppeteer로 복작합 페이지 크롤링
@@ -24,7 +24,7 @@
 ### axios + cheerio
 1. npm i axios cheerio
 
-### puppeteer
+### puppeteer 002
 1. npm i puppeteer
 2. userAgent 내 환경이 무엇인지
 3. const browser = await puppeteer.launch({headless:false});
@@ -33,3 +33,28 @@
 5. document 쓰는 위치 잘 기억!! 002/index.js
 6. https://try-puppeteer.appspot.com
 7. page.setUserAgent : navigator.userAgent
+
+### axios & cheerio로 이미지 다루기 003
+<pre>
+<code>
+  const imgResult = await axios.get(data.img.replace(/\?.*$/, ''), {
+    responseType:'arraybuffer',
+  });
+  fs.writeFileSync(`003/poster/${r[0]}.jpg`, imgResult.data);
+
+
+  const buffer = await page.screenshot({
+    path:`003/screenshot/${r[0]}.png`,
+    //fullPage:true,
+    clip:{
+      /*
+        0,0 [ 시작:(100,100 ), (width : 300,height: 300) ]
+      */
+      x:100,
+      y:100,
+      width:300,
+      height:300
+    }
+  });
+</code>
+</pre>
