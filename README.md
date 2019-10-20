@@ -35,6 +35,20 @@
 7. page.setUserAgent : navigator.userAgent
 
 ### axios & cheerio로 이미지 다루기 003
+##### 이미지 선택자 CSS 선택자
+1. $(querySelector) $$(querySelectorAll)
+2. #(아이디) .(클래스)
+  - $(div.poster)
+  - $(div#container)
+3. $$(div img)
+  - 띄어쓰기([자손])
+4. $$('div > a > img')
+  - > (무조건 부모 []자식] 관계다) 깊이가 바로 아래
+5. $$('div.poster>a>img')
+6. class="poster post_left" => poster.post_left
+7. $('img[width=30]') 속성으로 찾기
+
+##### 이미지 다루기
 <pre>
 <code>
   const imgResult = await axios.get(data.img.replace(/\?.*$/, ''), {
@@ -58,3 +72,5 @@
   });
 </code>
 </pre>
+
+### 인피니트 스크롤링
