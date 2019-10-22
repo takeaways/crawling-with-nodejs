@@ -12,11 +12,10 @@ const getImages = async (page) => {
       imgsEls.forEach(v => {
         let src = v.src;
         if(src) imgs.push(v.src);
-        nowTag = v.parentElement.className
         v.parentElement.removeChild(v);
       })
+      window.scrollBy(0,1500);
     }
-    window.scrollBy(0,1500);
     return imgs
   });
 }
@@ -29,7 +28,7 @@ const crawler = async () => {
     await page.goto('https://unsplash.com');
     while(true){
       result = result.concat( await getImages(page) );
-      if(result.length > 10) break;
+      if(result.length > 5) break;
     }
     await page.close();
     await browser.close();

@@ -4,7 +4,7 @@
   "description": "\"# crawling-with-nodejs\"\r ### NodeJs 크롤링\r 1. CSV, XLSX 파싱\r 2. axios, cheerio로 간단한 페이지 크롤링\r 3. puppeteer로 복작합 페이지 크롤링\r   - SPA 크롤링 (인피니트 스크롤링)\r   - 로그인이 필요한 페이지 스크롤링\r   - 데이터 베이스에 저장\r   - 크롤링한 결과물을 다시 CSV, XLSX로 저장",
   "main": "index.js",
   "scripts": {
-    "start": "node ./004/index.js"
+    "start": "node ./006/index.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,12 @@
     "cheerio": "^1.0.0-rc.3",
     "csv-parse": "^4.6.3",
     "csv-stringify": "^5.3.3",
+    "dotenv": "^8.2.0",
+    "g": "^2.0.1",
+    "mysql2": "^1.7.0",
     "puppeteer": "^1.20.0",
+    "sequelize": "^5.21.1",
+    "sequelize-cli": "^5.5.1",
     "xlsx": "^0.15.1"
   }
 }
